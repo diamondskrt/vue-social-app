@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --el-color-primary: #2563eb !important;
+    --el-border-radius-base: 6px !important;
+    --el-text-color-regular: #000000 !important;
+  }
+ 
+  .dark {
+    --el-color-primary: #2563eb !important;
+  } 
+}
+
+a {
+  color: var(--el-color-primary);
+}
+
+.el-form-item__label {
+  @apply font-semibold
+}
