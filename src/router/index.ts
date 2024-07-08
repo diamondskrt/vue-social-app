@@ -1,27 +1,27 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
-import { HomePage } from "@/pages/home";
-import { AuthLayout, DefaultLayout } from "@/layouts";
-import { SignInPage, SignUpPage } from "@/pages/auth";
-import { NotFoundPage } from "@/pages/404";
+import { AuthLayout, DefaultLayout } from '@/layouts';
+import { NotFoundPage } from '@/pages/404';
+import { SignInPage, SignUpPage } from '@/pages/auth';
+import { HomePage } from '@/pages/home';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: DefaultLayout,
-    children: [{ path: "", component: HomePage }],
+    children: [{ path: '', component: HomePage }],
   },
   {
-    path: "/auth",
+    path: '/auth',
     component: AuthLayout,
-    redirect: "/auth/sign-in",
+    redirect: '/auth/sign-in',
     children: [
-      { path: "sign-in", component: SignInPage },
-      { path: "sign-up", component: SignUpPage },
+      { path: 'sign-in', component: SignInPage },
+      { path: 'sign-up', component: SignUpPage },
     ],
   },
-  { path: "/404", component: NotFoundPage },
-  { path: "/:path(.*)*", redirect: "/404" },
+  { path: '/404', component: NotFoundPage },
+  { path: '/:path(.*)*', redirect: '/404' },
 ];
 
 export const router = createRouter({

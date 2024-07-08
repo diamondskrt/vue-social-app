@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Header } from "@/components/shared/header";
-import { Sidebar } from "@/components/shared/sidebar";
-import { Footer } from "@/components/shared/footer";
+import { Footer } from '@/components/shared/footer';
+import { Header } from '@/components/shared/header';
+import { Sidebar } from '@/components/shared/sidebar';
 </script>
 
 <template>

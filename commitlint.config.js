@@ -15,8 +15,8 @@ export const helperFactory = function (type) {
 };
 
 const { always, never } = {
-  always: helperFactory("always"),
-  never: helperFactory("never"),
+  always: helperFactory('always'),
+  never: helperFactory('never'),
 };
 
 export default {
@@ -26,33 +26,33 @@ export default {
       headerPattern:
         /^(\w+)(?: #(\d+))?(!)? (?:\[(.*?)\] )?(?:([^[]*?)(?: - (.*)|:?))$/,
       headerCorrespondence: [
-        "type",
-        "ticket",
-        "breaking",
-        "scope",
-        "subject",
-        "description",
+        'type',
+        'ticket',
+        'breaking',
+        'scope',
+        'subject',
+        'description',
       ],
-      issuePrefixes: ["#"],
+      issuePrefixes: ['#'],
     },
   },
   rules: {
-    "header-max-length": always.error(100),
-    "scope-case": never.error([]),
-    "type-case": always.error("sentence-case"),
-    "type-enum": always.error([
-      "build",
-      "chore",
-      "ci",
-      "docs",
-      "style",
-      "refactor",
-      "perf",
-      "test",
-      "fix",
-      "feat",
-      "revert",
+    'header-max-length': always.error(100),
+    'scope-case': never.error([]),
+    'type-case': always.error('sentence-case'),
+    'type-enum': always.error([
+      'build',
+      'chore',
+      'ci',
+      'docs',
+      'style',
+      'refactor',
+      'perf',
+      'test',
+      'fix',
+      'feat',
+      'revert',
     ]),
-    "body-max-line-length": [0, "always"],
+    'body-max-line-length': [0, 'always'],
   },
 };
